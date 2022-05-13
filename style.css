@@ -116,7 +116,7 @@
 }
 
 .services .container {
-    width: 100px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -221,9 +221,9 @@
 }
 .imgBx2 {
     background: url("assets/bg2.jpg");
+    width: 50%;
     background-size: cover;
     background-position: center;
-    width: 50%;
 }
 .redbg {
     background: url("assets/red.jpg") !important;
@@ -237,6 +237,7 @@
 }
 .form .inputBx input {
     width: 100%;
+    background: transparent;
     box-shadow: none;
     border: none;
     outline: none;
@@ -253,6 +254,7 @@
 
 .form .inputBx textarea {
     width: 100%;
+    background: transparent;
     box-shadow: none;
     border: none;
     outline: none;
@@ -361,12 +363,15 @@
         max-width: 550px;
         margin-bottom: 40px;
     }
+    
     .testimonials .contentBx:last-child {
         margin-bottom: 0px;
     }
+    
     .contact {
         padding: 50px;
     }
+
     .footer {
         padding: 20px 50px;
         flex-direction: column-reverse;
