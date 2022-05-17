@@ -137,14 +137,15 @@
 .services .container .serviceBx img {
     max-width: 100px;
 }
+
 .services .container .serviceBx h2 {
     font-weight: 500;
     font-size: 20px;
     letter-spacing: 1px;
 }
+
 .technology {
     background:#3f8ffc ;
-    width: 100%;
     padding: 100px;
     padding-top: 300px;
     margin-top: -300px;
@@ -152,6 +153,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .technology .contentBx {
     max-width: 800px;
 }
@@ -270,13 +272,14 @@
     color: #fff;
 }
 
-.form .inputBx input[type="submit"] {
+.form .inputBx .btn2
+{
     width: 150px;
-    background: #fff;
-    color: #111;
+    background: #162c3b;
+    border: 1px solid #fff;
+    color: #fff;
     cursor: pointer;
     font-weight: 400;
-
 }
 .footer {
     background: #162c3b;
