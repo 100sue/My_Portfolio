@@ -103,7 +103,7 @@
 }
 
 .about .imgBx {
-    background: url("assets/window.jpg");
+    background: url("assets/fond2.jpg");
     width: 50%;
     background-size: cover;
     background-position: center;
@@ -126,7 +126,7 @@
 
 .services .container .serviceBx {
     position: relative;
-    background: #fff;
+    background: #b0171c;
     width: 350px;
     height: 400px;
     display: flex;
@@ -222,7 +222,7 @@
     text-align: center;
 }
 .imgBx2 {
-    background: url("assets/bg2.jpg");
+    background: url("assets/spirit.jpg");
     width: 50%;
     background-size: cover;
     background-position: center;
