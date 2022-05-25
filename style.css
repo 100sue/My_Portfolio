@@ -5,7 +5,92 @@
   padding: 0;
   box-sizing: 0;
   font-family: 'Poppins', sans-serif;
+  position: relative;
+  scroll-behavior: smooth;
+}
 
+body {
+    overflow-x: hidden;
+}
+
+.sideBar 
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 500px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.sideBar {
+    position: fixed;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    padding: 40px;
+    z-index: 100;
+    right: -100%;
+}
+
+.sideBar.active {
+    right: 0;
+}
+
+.sideBar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sideBar ul li {
+    list-style: none;
+}
+
+.sideBar ul li a {
+    position: relative;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 700;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.sideBar ul li a:hover {
+    color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-20px);
+    transition-delay: 0s;
+}
+
+.sideBar ul li a::before {
+   content: attr(data-text);
+   position: absolute;
+   pointer-events: none;
+   bottom: -10px;
+   z-index: 1;
+   font-size: 0.5em;
+   color: #3f8ffc;
+   font-weight: 500;
+   letter-spacing: 100px;
+   opacity: 0;
+   transition: 0.5s;
+   text-shadow: 0 0 10px #3f8ffc,
+   0 0 30px #3f8ffc,
+   0 0 80px #3f8ffc;
+}
+
+.sideBar ul li a:hover::before {
+    letter-spacing: 6px;
+    opacity: 1;
 }
 
 .banner {
@@ -48,7 +133,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 80%;
     padding: 40px 100px;
     display: flex;
     justify-content: space-evenly;
@@ -74,10 +159,18 @@
     cursor: pointer;
 }
 
+.banner header .toggle.active {
+    background: url("assets/close.png");
+    background-size: 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .about {
     position: relative;
     width: 100%;
     display: flex;
+    background: #162c3b;
 }
 
 .about .contentBx {
@@ -103,7 +196,7 @@
 }
 
 .about .imgBx {
-    background: url("assets/fond2.jpg");
+    background: url("assets/lesson.jpg");
     width: 50%;
     background-size: cover;
     background-position: center;
@@ -132,6 +225,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .services .container .serviceBx img {
@@ -332,6 +426,7 @@
     }
     .services {
         padding: 50px;
+        width: 100%;
     }
     .services .container {
         justify-content: center;
@@ -347,6 +442,7 @@
         padding-top: 300px;
         justify-content: center;
         flex-direction: column;
+        width: 100%;
     }
     .technology .imgBx {
         margin-top: 40px;
@@ -354,12 +450,14 @@
     }
     .client {
         padding: 50px;
+        width: 100%;
     }
     .client .imgBx {
         justify-content: center;
     }
     .testimonials {
         padding: 50px;
+        width: 100%;
     }
     .testimonials .contentBx {
         padding: 60px 40px;
@@ -373,12 +471,14 @@
     
     .contact {
         padding: 50px;
+        width: 100%;
     }
 
     .footer {
         padding: 20px 50px;
         flex-direction: column-reverse;
         text-align: center;
+        width: 100%;
     }
     .footer ul {
         margin-bottom: 20px;
